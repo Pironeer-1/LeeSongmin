@@ -2,7 +2,6 @@ package com.pironeer.mytemplatecode.member.repository;
 
 import com.pironeer.mytemplatecode.member.entity.Member;
 import lombok.extern.slf4j.Slf4j;
-import org.assertj.core.api.Assert;
 import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
@@ -42,7 +41,6 @@ public class MemberRepository {
 
     // id로 Member 조회
     public Optional<Member> findById(Long id) {
-        Assert.notNull(id, "ID MUST NOT BE NULL");
         return Optional.ofNullable(memberMap.get(id));
     }
 

@@ -1,10 +1,15 @@
 package com.pironeer.mytemplatecode.board.service;
 
+import com.pironeer.mytemplatecode.board.dto.request.BoardCreateRequest;
 import com.pironeer.mytemplatecode.board.dto.request.BoardUpdateRequest;
 import com.pironeer.mytemplatecode.board.dto.response.BoardResponse;
 import com.pironeer.mytemplatecode.board.entity.Board;
 import com.pironeer.mytemplatecode.board.mapper.BoardMapper;
 import com.pironeer.mytemplatecode.board.repository.BoardRepository;
+import com.pironeer.mytemplatecode.global.dto.response.result.SingleResult;
+import com.pironeer.mytemplatecode.global.dto.response.result.ListResult;
+import com.pironeer.mytemplatecode.global.exception.CustomException;
+import com.pironeer.mytemplatecode.global.exception.ErrorCode;
 import com.pironeer.mytemplatecode.global.service.ResponseService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -16,7 +21,7 @@ import java.util.List;
 public class BoardService {
     private final BoardRepository boardRepository;
 
-    public SingleResult<Long> save(BoardRepository request) {
+    public SingleResult<Long> save(BoardCreateRequest request) {
         Board savedBoard = boardRepository.save(BoardMapper.from(request));
         return ResponseService.getSingleResult(savedBoard.getId());
     }

@@ -1,5 +1,7 @@
 package com.pironeer.mytemplatecode.global.service;
 
+import com.pironeer.mytemplatecode.global.dto.response.result.ListResult;
+import com.pironeer.mytemplatecode.global.dto.response.result.SingleResult;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.pironeer.mytemplatecode.global.dto.response.result;
+package com.pironeer.mytemplatecode.global.dto.response;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;

@@ -1,6 +1,7 @@
 package com.pironeer.mytemplatecode.global.exception;
 
-import com.pironeer.mytemplatecode.global.dto.response.result.ErrorResponse;
+import com.pironeer.mytemplatecode.global.dto.response.ErrorResponse;
+import com.pironeer.mytemplatecode.global.dto.response.result.ExceptionResult;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.converter.HttpMessageNotReadableException;

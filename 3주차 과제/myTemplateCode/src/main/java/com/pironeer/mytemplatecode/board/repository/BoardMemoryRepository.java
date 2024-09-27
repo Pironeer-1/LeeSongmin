@@ -11,7 +11,7 @@ import java.util.Optional;
 import java.util.concurrent.atomic.AtomicLong;
 
 @Repository
-public class TopicMemoryRepositoryV2 implements BoardRepository {
+public class BoardMemoryRepository implements BoardRepository {
     private final AtomicLong boardIdxGenerator = new AtomicLong(0);
     private final Map<Long, Board> boardMap = new HashMap<>();
 
